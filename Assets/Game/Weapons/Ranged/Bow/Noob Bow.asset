@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895c570f90a74588a657502bee5ae461, type: 3}
+  m_Name: Noob Bow
+  m_EditorClassIdentifier: 
+  animatorOverride: {fileID: 22100000, guid: 5e7b8c1beda83454daa8a0fa610d1562, type: 2}
+  equippedPrefab: {fileID: 4860649446894823469, guid: 6d5c272e6fddc41a6b09865137dbff74, type: 3}
+  range: 6
+  timeBetweenAttacks: 1
+  damage: 4
+  isRightHanded: 0
+  projectile: {fileID: 6971933134570956954, guid: c228ddbfe166d49b382a3d770f4163c8, type: 3}
+  projectiles: 1
