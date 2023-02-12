@@ -1,11 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetBrains.Frontend.2021.2", "JetBrains.Frontend.2021.2.csproj", "{67c81732-c2de-0c7c-72b9-7f2f687a8d09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{32ad6594-6886-e172-59cf-f87229a9c3ce}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{3a87c44d-57c2-2ac3-6e03-5b4aa29abf73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{e35ed9be-b5ca-9046-27de-2aec0a68b2de}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetBrains.Frontend.2019.4", "JetBrains.Frontend.2019.4.csproj", "{15de12ed-2c22-7b49-9c02-6bc3764167fe}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetBrains.Frontend.2020.2", "JetBrains.Frontend.2020.2.csproj", "{965b1167-c162-b840-f594-a7774dde6db9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67c81732-c2de-0c7c-72b9-7f2f687a8d09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67c81732-c2de-0c7c-72b9-7f2f687a8d09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32ad6594-6886-e172-59cf-f87229a9c3ce}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32ad6594-6886-e172-59cf-f87229a9c3ce}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3a87c44d-57c2-2ac3-6e03-5b4aa29abf73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3a87c44d-57c2-2ac3-6e03-5b4aa29abf73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e35ed9be-b5ca-9046-27de-2aec0a68b2de}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e35ed9be-b5ca-9046-27de-2aec0a68b2de}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15de12ed-2c22-7b49-9c02-6bc3764167fe}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15de12ed-2c22-7b49-9c02-6bc3764167fe}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965b1167-c162-b840-f594-a7774dde6db9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965b1167-c162-b840-f594-a7774dde6db9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

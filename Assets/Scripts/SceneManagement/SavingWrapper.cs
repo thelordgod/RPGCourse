@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using Saving;
 using UnityEngine;
+// ReSharper disable Unity.PerformanceCriticalCodeInvocation
 
 namespace SceneManagement
 {
@@ -13,7 +15,7 @@ namespace SceneManagement
         {
             var fader = FindObjectOfType<Fader>();
             fader.FadeOutImmediate();
-            yield return GetComponent<SavingSystem>().LoadLastScene(DefaultSaveFile);
+            // yield return GetComponent<SavingSystem>().LoadLastScene(DefaultSaveFile);
             yield return fader.FadeIn(fadeInTime);
         }
 

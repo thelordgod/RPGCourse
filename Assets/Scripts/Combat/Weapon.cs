@@ -33,7 +33,7 @@ namespace Combat
             }
         }
 
-        private void DestroyOldWeapon(Transform rightHand, Transform leftHand)
+        private static void DestroyOldWeapon(Transform rightHand, Transform leftHand)
         {
             var oldWeapon = rightHand.Find(WeaponName);
             if (oldWeapon == null) oldWeapon = leftHand.Find(WeaponName);
@@ -68,7 +68,6 @@ namespace Combat
 
                 var projectilePosition = originHand.position + offset;
                 var projectileInstance = Instantiate(projectile, projectilePosition, Quaternion.identity);
-
                 projectileInstance.SetTarget(target, damage, shooterTag, targetHeight);
             }
         }
