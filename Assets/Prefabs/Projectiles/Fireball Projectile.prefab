@@ -4938,7 +4938,7 @@ MonoBehaviour:
   hitEffect: {fileID: 2302457091093092515, guid: 69d1b1037536b504884c93bb73d662db, type: 3}
   destroyOnCollision:
   - {fileID: 6547485034462362951}
-  lifeAfterImpact: 0.12
+  lifeAfterImpact: 1
 --- !u!135 &2755390202870709605
 SphereCollider:
   m_ObjectHideFlags: 0
