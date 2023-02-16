@@ -51,6 +51,7 @@ namespace Combat
             if (other.CompareTag(_shooterTag)) return;
             if (colliderHealth.IsDead()) return;
             if (!colliderHealth.IsDead()) colliderHealth.TakeDamage(_damage);
+            speed = 0;
             if (hitEffect)
             {
                 var projectileTransform = transform;

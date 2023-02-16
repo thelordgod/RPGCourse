@@ -206,7 +206,7 @@ MonoBehaviour:
   hitEffect: {fileID: 7500356161968478770, guid: 280bfe4ee5be74977afbffc4215104a9, type: 3}
   destroyOnCollision:
   - {fileID: 8938375370810574530}
-  lifeAfterImpact: 0
+  lifeAfterImpact: 1
 --- !u!65 &7337376742694552383
 BoxCollider:
   m_ObjectHideFlags: 0
