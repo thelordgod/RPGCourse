@@ -27,9 +27,14 @@ namespace Combat
                 weapon.name = WeaponName;
             }
 
+            var overrideController = animator.runtimeAnimatorController as AnimatorOverrideController;
             if (animatorOverride)
             {
                 animator.runtimeAnimatorController = animatorOverride;
+            }
+            else if (overrideController)
+            {
+                animator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
             }
         }
 
@@ -52,7 +57,8 @@ namespace Combat
             return projectile != null;
         }
 
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, string shooterTag, float targetHeight)
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, string shooterTag,
+            float targetHeight)
         {
             var offsetAngleStep = Mathf.PI * 2 / projectiles;
             var originHand = GetTransform(rightHand, leftHand);

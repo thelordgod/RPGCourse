@@ -5,7 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1201183691, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
@@ -83,11 +83,15 @@ PrefabInstance:
     - target: {fileID: 5787338376641845835, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
       propertyPath: defaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 02ce226ac443548c281047b637e5fe9c, type: 2}
+      objectReference: {fileID: 11400000, guid: fc8634559f30946fb88b5054c21d67d6, type: 2}
     - target: {fileID: 5787338376641845835, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
       propertyPath: handTransform
       value: 
       objectReference: {fileID: 3528071125486361676}
+    - target: {fileID: 5787338376641845835, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
+      propertyPath: defaultWeaponName
+      value: Melee/Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 5787338376641845835, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
       propertyPath: leftHandTransform
       value: 
@@ -99,10 +103,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 556281534838984108, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
     - {fileID: 5705722902254125803, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3066581395322840239, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3528071125486367802}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 354778842546862684, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7219921001034017703}
   m_SourcePrefab: {fileID: 100100000, guid: 89adc74c60d8b41b58ca29d3d52dd77a, type: 3}
 --- !u!1 &1357113754652571750 stripped
 GameObject:
@@ -137,7 +146,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4375156016174769813}
     m_Modifications:
     - target: {fileID: 133518, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
@@ -189,7 +198,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
 --- !u!4 &3528071125486304334 stripped
 Transform:

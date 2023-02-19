@@ -1,10 +1,11 @@
 using Core;
 using Movement;
+using Saving;
 using UnityEngine;
 
 namespace Combat
 {
-    public class Fighter : MonoBehaviour, IAction
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] private Transform rightHandTransform;
         [SerializeField] private Transform leftHandTransform;
@@ -32,7 +33,10 @@ namespace Combat
 
         private void Start()
         {
-            EquipWeapon(defaultWeapon);
+            if (!_currentWeapon)
+            {
+                EquipWeapon(defaultWeapon);
+            }
         }
 
         private void Update()
@@ -135,6 +139,19 @@ namespace Combat
         {
             _animator.ResetTrigger(AttackTrigger);
             _animator.SetTrigger(StopAttackTrigger);
+        }
+
+        public object CaptureState()
+        {
+            return _currentWeapon.name;
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        public void RestoreState(object state)
+        {
+            var weaponName = (string) state;
+            var weapon = Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
         }
     }
 }
