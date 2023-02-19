@@ -10,12 +10,10 @@ namespace Combat
         [SerializeField] private float respawnTime = 5;
 
         private SphereCollider _collider;
-        private Transform[] _children;
 
         private void Awake()
         {
             _collider = GetComponent<SphereCollider>();
-            _children = GetComponentsInChildren<Transform>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -35,9 +33,8 @@ namespace Combat
         private void SetPickupVisibility(bool visibility)
         {
             _collider.enabled = visibility;
-            foreach (var child in _children)
+            foreach (Transform child in transform)
             {
-                if (child == gameObject.transform) continue;
                 child.gameObject.SetActive(visibility);
             }
         }
