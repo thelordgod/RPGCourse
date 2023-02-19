@@ -10,14 +10,12 @@ namespace Combat
         [SerializeField] private float respawnTime = 5;
 
         private SphereCollider _collider;
-        private MeshRenderer _meshRenderer;
-        private ParticleSystem.EmissionModule _particleSystemEmission;
+        private Transform[] _children;
 
         private void Awake()
         {
             _collider = GetComponent<SphereCollider>();
-            _meshRenderer = GetComponentInChildren<MeshRenderer>();
-            _particleSystemEmission = GetComponentInChildren<ParticleSystem>().emission;
+            _children = GetComponentsInChildren<Transform>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -36,16 +34,24 @@ namespace Combat
 
         private void ShowPickup()
         {
+            print("attempting to show pickup...");
             _collider.enabled = true;
-            _meshRenderer.enabled = true;
-            _particleSystemEmission.enabled = true;
+            foreach (var child in _children)
+            {
+                if (child == gameObject.transform) continue;
+                child.gameObject.SetActive(true);
+            }
         }
 
         private void HidePickup()
         {
+            print("attempting to hide pickup...");
             _collider.enabled = false;
-            _meshRenderer.enabled = false;
-            _particleSystemEmission.enabled = false;
+            foreach (var child in _children)
+            {
+                if (child == gameObject.transform) continue;
+                child.gameObject.SetActive(false);
+            }
         }
     }
 }
