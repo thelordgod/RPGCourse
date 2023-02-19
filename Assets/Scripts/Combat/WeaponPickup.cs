@@ -27,30 +27,18 @@ namespace Combat
 
         private IEnumerator HideForSeconds(float seconds)
         {
-            HidePickup();
+            SetPickupVisibility(false);
             yield return new WaitForSeconds(seconds);
-            ShowPickup();
+            SetPickupVisibility(true);
         }
 
-        private void ShowPickup()
+        private void SetPickupVisibility(bool visibility)
         {
-            print("attempting to show pickup...");
-            _collider.enabled = true;
+            _collider.enabled = visibility;
             foreach (var child in _children)
             {
                 if (child == gameObject.transform) continue;
-                child.gameObject.SetActive(true);
-            }
-        }
-
-        private void HidePickup()
-        {
-            print("attempting to hide pickup...");
-            _collider.enabled = false;
-            foreach (var child in _children)
-            {
-                if (child == gameObject.transform) continue;
-                child.gameObject.SetActive(false);
+                child.gameObject.SetActive(visibility);
             }
         }
     }
