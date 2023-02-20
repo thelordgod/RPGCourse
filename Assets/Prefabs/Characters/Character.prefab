@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 1030934965526402654}
   - component: {fileID: 2723664220827575448}
   - component: {fileID: 1201183696}
-  - component: {fileID: -6996405207123323151}
+  - component: {fileID: 9115472576773399794}
   - component: {fileID: 7601071695073540718}
+  - component: {fileID: -6996405207123323151}
   - component: {fileID: 7413737037079413860}
   m_Layer: 0
   m_Name: Character
@@ -154,7 +155,6 @@ MonoBehaviour:
   rightHandTransform: {fileID: 0}
   leftHandTransform: {fileID: 0}
   defaultWeapon: {fileID: 11400000, guid: 02ce226ac443548c281047b637e5fe9c, type: 2}
-  defaultWeaponName: Unarmed/Fists
 --- !u!114 &1030934965526402654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +192,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5274a2c89f9046d9b0fd56c8b46709eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9115472576773399794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354778842546862684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96517fba1c854efa96277df94359e2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  characterClass: 1
+  progression: {fileID: 11400000, guid: 78f35f78411ad4f4b83c03e486f7cccc, type: 2}
+--- !u!114 &7601071695073540718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354778842546862684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c60f73c9f348f0b021d09497f7850f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: 
 --- !u!136 &-6996405207123323151
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -215,19 +243,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &7601071695073540718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354778842546862684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c60f73c9f348f0b021d09497f7850f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueIdentifier: 
 --- !u!54 &7413737037079413860
 Rigidbody:
   m_ObjectHideFlags: 0
