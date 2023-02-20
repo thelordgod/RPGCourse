@@ -21,10 +21,30 @@ MonoBehaviour:
     - 400
     - 700
   - characterClass: 1
-    health: []
+    health:
+    - 40
+    - 80
+    - 120
+    - 200
+    - 300
   - characterClass: 2
-    health: []
+    health:
+    - 30
+    - 60
+    - 100
+    - 150
+    - 230
   - characterClass: 3
-    health: []
+    health:
+    - 30
+    - 60
+    - 100
+    - 150
+    - 230
   - characterClass: 4
-    health: []
+    health:
+    - 200
+    - 400
+    - 700
+    - 1000
+    - 1500

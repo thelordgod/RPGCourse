@@ -5,7 +5,7 @@ namespace Stats
         Player,
         Grunt,
         Archer,
-        Boss,
-        Mage
+        Mage,
+        Boss
     }
 }

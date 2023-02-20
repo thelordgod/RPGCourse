@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 818457833}
     m_Modifications:
+    - target: {fileID: 520817403612548250, guid: cc53ac033e17143d9a06344641fce3af, type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1208817133294457350, guid: cc53ac033e17143d9a06344641fce3af, type: 3}
       propertyPath: uniqueIdentifier
       value: 9f94b783-aa61-4bcd-b40e-214d9409b4a8
@@ -398,6 +402,10 @@ PrefabInstance:
       propertyPath: defaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: fc8634559f30946fb88b5054c21d67d6, type: 2}
+    - target: {fileID: 7546248176050382536, guid: 0d0d29b4540704e8fb6d14fb034e0f93, type: 3}
+      propertyPath: startingLevel
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9170855858885294164, guid: 0d0d29b4540704e8fb6d14fb034e0f93, type: 3}
       propertyPath: uniqueIdentifier
       value: f5a39b47-55e7-43be-8e35-e46041302ebc
@@ -908,6 +916,10 @@ PrefabInstance:
       propertyPath: defaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: 4d092c749286c447b9a011eb9d16e591, type: 2}
+    - target: {fileID: 2420783202371538311, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3002459217085700788, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.087

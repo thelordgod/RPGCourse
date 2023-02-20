@@ -41,14 +41,14 @@ namespace Combat
 
         private Vector3 GetAimLocation()
         {
-            return _target.transform.position + Vector3.up * (_targetHeight * 0.6f);
+            return _target.transform.position + Vector3.up * (_targetHeight + 0.6f);
         }
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.CompareTag(_shooterTag)) return;
             var colliderHealth = other.GetComponent<Health>();
             if (colliderHealth == null) return;
-            if (other.CompareTag(_shooterTag)) return;
             if (colliderHealth.IsDead()) return;
             if (!colliderHealth.IsDead()) colliderHealth.TakeDamage(_damage);
             speed = 0;
