@@ -1,7 +1,9 @@
+using Core;
 using Saving;
+using Stats;
 using UnityEngine;
 
-namespace Core
+namespace Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
@@ -15,6 +17,11 @@ namespace Core
         {
             _actionScheduler = GetComponent<ActionScheduler>();
             _animator = GetComponent<Animator>();
+        }
+
+        private void Start()
+        {
+            healthPoints = GetComponent<BaseStats>().GetHealth();
         }
 
         public bool IsDead()

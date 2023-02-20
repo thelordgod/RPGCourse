@@ -1,5 +1,5 @@
+using Attributes;
 using Combat;
-using Core;
 using Movement;
 using UnityEngine;
 
