@@ -6,9 +6,13 @@ namespace Attributes
 {
     public class HealthDisplay : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI textBox;
-        
         private Health _health;
+        private TextMeshProUGUI _textBox;
+
+        private void Start()
+        {
+            _textBox = GetComponent<TextMeshProUGUI>();
+        }
 
         private void Awake()
         {
@@ -17,7 +21,7 @@ namespace Attributes
 
         private void Update()
         {
-            textBox.text = $"{_health.GetPercentage()}%";
+            _textBox.text = $"{_health.GetPercentage():0.0}%";
         }
     }
 }
