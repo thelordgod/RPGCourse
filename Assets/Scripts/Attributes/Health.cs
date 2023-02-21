@@ -12,6 +12,7 @@ namespace Attributes
         private bool _isDead;
         private Animator _animator;
         private ActionScheduler _actionScheduler;
+        private float _maxHealth;
 
         private void Awake()
         {
@@ -22,6 +23,7 @@ namespace Attributes
         private void Start()
         {
             healthPoints = GetComponent<BaseStats>().GetHealth();
+            _maxHealth = healthPoints;
         }
 
         public bool IsDead()
@@ -34,6 +36,11 @@ namespace Attributes
             healthPoints = Mathf.Max(healthPoints - damage, 0);
             print($"{gameObject.name} receives {damage} damage! {healthPoints} health left!");
             if (healthPoints == 0) Die();
+        }
+
+        public float GetPercentage()
+        {
+            return healthPoints / _maxHealth * 100;
         }
 
         private void Die()

@@ -41,7 +41,7 @@ namespace Combat
 
         private Vector3 GetAimLocation()
         {
-            return _target.transform.position + Vector3.up * (_targetHeight + 0.6f);
+            return _target.transform.position + Vector3.up * (_targetHeight + 1f);
         }
 
         private void OnTriggerEnter(Collider other)
