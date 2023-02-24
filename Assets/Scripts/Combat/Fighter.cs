@@ -124,6 +124,11 @@ namespace Combat
             Hit();
         }
 
+        public Health GetTarget()
+        {
+            return _target;
+        }
+        
         private bool GetIsInRange()
         {
             return Vector3.Distance(_target.transform.position, _mover.transform.position) < _currentWeapon.GetRange();
