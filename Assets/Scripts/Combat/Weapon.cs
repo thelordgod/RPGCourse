@@ -57,7 +57,7 @@ namespace Combat
             return projectile != null;
         }
 
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, string shooterTag,
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator,
             float targetHeight)
         {
             var offsetAngleStep = Mathf.PI * 2 / projectiles;
@@ -74,7 +74,7 @@ namespace Combat
 
                 var projectilePosition = originHand.position + offset;
                 var projectileInstance = Instantiate(projectile, projectilePosition, Quaternion.identity);
-                projectileInstance.SetTarget(target, damage, shooterTag, targetHeight);
+                projectileInstance.SetTarget(target, damage, instigator, targetHeight);
             }
         }
 

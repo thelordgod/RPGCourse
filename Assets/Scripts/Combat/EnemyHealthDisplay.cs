@@ -18,7 +18,7 @@ namespace Combat
         private void Update()
         {
             var target = _player.GetTarget();
-            _textBox.text = target ? $"{target.GetPercentage():0.0}%" : "NA";
+            _textBox.text = target ? $"{target.GetPercentage():0.0}%" : "NONE";
         }
     }
 }

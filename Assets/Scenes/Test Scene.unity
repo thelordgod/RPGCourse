@@ -334,6 +334,24 @@ Transform:
   m_Father: {fileID: 1698949678}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1049140580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6626094701015880489, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
+  m_PrefabInstance: {fileID: 1954701489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049140595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049140580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b6430edd784f8b8f35a0862834fc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoints: 0
 --- !u!1001 &1209689110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5860993598329798443, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
       propertyPath: healthPoints
-      value: 100000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7037873934859966146, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1055,7 +1073,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6626094701015880489, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049140595}
   m_SourcePrefab: {fileID: 100100000, guid: 375e1b48b1a644ed7a73669ebd3fc1fe, type: 3}
 --- !u!1001 &2001460620
 PrefabInstance:

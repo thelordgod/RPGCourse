@@ -11,10 +11,10 @@ namespace Combat
         [SerializeField] private GameObject[] destroyOnCollision = null;
         [SerializeField, Min(0f)] private float lifeAfterImpact;
 
+        private GameObject _instigator;
         private Health _target;
         private float _damage;
         private float _targetHeight;
-        private string _shooterTag;
 
         private void Start()
         {
@@ -32,11 +32,11 @@ namespace Combat
             transform.Translate(Vector3.forward * (Time.deltaTime * speed));
         }
 
-        public void SetTarget(Health target, float damage, string shooterTag, float targetHeight = 1f)
+        public void SetTarget(Health target, float damage, GameObject instigator, float targetHeight = 1f)
         {
             _damage = damage;
             _target = target;
-            _shooterTag = shooterTag;
+            _instigator = instigator;
         }
 
         private Vector3 GetAimLocation()
@@ -46,11 +46,11 @@ namespace Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(_shooterTag)) return;
+            if (other.CompareTag(_instigator.tag)) return;
             var colliderHealth = other.GetComponent<Health>();
             if (colliderHealth == null) return;
             if (colliderHealth.IsDead()) return;
-            if (!colliderHealth.IsDead()) colliderHealth.TakeDamage(_damage);
+            if (!colliderHealth.IsDead()) colliderHealth.TakeDamage(_instigator, _damage);
             speed = 0;
             if (hitEffect)
             {

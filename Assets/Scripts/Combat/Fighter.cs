@@ -2,6 +2,7 @@ using Attributes;
 using Core;
 using Movement;
 using Saving;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 namespace Combat
@@ -110,11 +111,11 @@ namespace Combat
             if (!_target) return;
             if (_currentWeapon.HasProjectile())
             {
-                _currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target, tag, _height);
+                _currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, _target, gameObject, _height);
             }
             else
             {
-                _target.TakeDamage(_currentWeapon.GetDamage());
+                _target.TakeDamage(gameObject, _currentWeapon.GetDamage());
             }
         }
 

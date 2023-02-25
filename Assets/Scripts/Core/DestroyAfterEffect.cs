@@ -17,7 +17,6 @@ namespace Core
             {
                 Destroy(gameObject);
             }
-        
         }
     }
 }
