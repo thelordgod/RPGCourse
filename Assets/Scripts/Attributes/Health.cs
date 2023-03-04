@@ -24,9 +24,9 @@ namespace Attributes
         private void Start()
         {
             var stats = GetComponent<BaseStats>();
-            _healthPoints = stats.GetHealth();
+            _healthPoints = stats.GetStat(Stat.Health);
             _maxHealth = _healthPoints;
-            _xpReward = stats.GetExperienceReward();
+            _xpReward = stats.GetStat(Stat.ExperienceReward);
         }
 
         public bool IsDead()
@@ -39,6 +39,11 @@ namespace Attributes
             _healthPoints = Mathf.Max(_healthPoints - damage, 0);
             if (_healthPoints != 0) return;
             Die();
+            AwardExperience(instigator);
+        }
+
+        private void AwardExperience(GameObject instigator)
+        {
             var instigatorExp = instigator.GetComponent<Experience>();
             if (!instigatorExp) return;
             instigatorExp.GainExperience(_xpReward);

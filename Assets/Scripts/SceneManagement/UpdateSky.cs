@@ -26,7 +26,7 @@ namespace SceneManagement
             DynamicGI.UpdateEnvironment();
             _baker.RenderProbe();
             yield return new WaitForEndOfFrame();
-            RenderSettings.customReflectionTexture = _baker.texture;
+            RenderSettings.customReflection = _baker.texture;
         }
     }
 }
